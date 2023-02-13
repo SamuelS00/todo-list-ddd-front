@@ -1,57 +1,40 @@
 import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import { ThemeProvider, Box } from '@mui/material';
+import { appTheme } from './config/thema';
+import { SnackbarProvider } from 'notistack';
+import { Layout } from './components/Layout';
+import { Route, Routes } from 'react-router-dom';
+import { TodoList } from './features/todos/TodoList';
+import { TodoCreate } from './features/todos/TodoCreate';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
-    </div>
+    <ThemeProvider theme={appTheme}>
+      <SnackbarProvider
+        autoHideDuration={2000}
+        maxSnack={3}
+        anchorOrigin={{ vertical: "top", horizontal: "right" }}
+      >
+        <Box
+          component="main"
+          sx={{
+            height: "100vh",
+            minHeight: 650,
+            backgroundColor: (theme) => theme.palette.grey[900],
+          }}
+        >
+          <Layout>
+            <Routes>
+              <Route path="/" element={<TodoList />} />
+              {/* Todo */}
+              <Route path="/todos" element={<TodoList />} />
+              <Route path="/todos/create" element={<TodoCreate />} />
+              {/* <Route path="/todos/edit/:id" element={<TodoEdit />} /> */}
+            </Routes>
+          </Layout>
+        </Box>
+      </SnackbarProvider>
+    </ThemeProvider>
   );
 }
 
