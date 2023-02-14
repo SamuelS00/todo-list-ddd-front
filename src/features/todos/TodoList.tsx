@@ -13,9 +13,11 @@ import { TodoTable } from "./components/TodoTable";
 
 const initialOptions = {
   page: 1,
-  search: "",
+  filter: "",
   per_page: 10,
   rowsPerPage: [10, 20, 30],
+  sort: null,
+  sort_dir: null
 };
 
 export const TodoList = () => {
@@ -44,10 +46,11 @@ export const TodoList = () => {
 
   function handleFilterChange(filterModel: GridFilterModel): void {
     if (filterModel.quickFilterValues?.length) {
-      const search = filterModel.quickFilterValues.join(" ");
-      setOptions({ ...options, search });
+      const filter = filterModel.quickFilterValues.join(" ");
+
+      setOptions({ ...options, filter });
     } else {
-      setOptions({ ...options, search: "" });
+      setOptions({ ...options, filter: "" });
     }
   }
 
