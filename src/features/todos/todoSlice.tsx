@@ -8,8 +8,8 @@ import { apiSlice } from "../api/apiSlice";
 
 const endpointUrl = "/todos";
 
-function getTodos({ page = 1, per_page = 10, search = "" }) {
-  const params = { page, per_page, search };
+function getTodos({ page = 1, per_page = 10, filter = "" }) {
+  const params = { page, per_page, filter };
 
   return `${endpointUrl}?${parseQueryParams(params)}`;
 }
@@ -19,7 +19,7 @@ function parseQueryParams(params: TodoParams): string {
 
   params.page && query.append("page", params.page.toString());
   params.per_page && query.append("per_page", params.per_page.toString());
-  params.search && query.append("search", params.search.toString());
+  params.filter && query.append("filter", params.filter.toString());
 
   return query.toString();
 }
