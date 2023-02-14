@@ -35,8 +35,9 @@ export interface Meta {
 }
 
 export interface TodoParams {
-  page?: number;
-  per_page?: number;
-  search?: string;
-  is_active?: boolean;
+  page?: number
+  per_page?: number
+  sort?: string | null
+  sort_dir?: 'asc' | 'dec' | null
+  filter?: string | null
 }
