@@ -8,7 +8,7 @@ import { TodoForm } from "./components/TodoForm";
 export const TodoCreate = () => {
   const { enqueueSnackbar } = useSnackbar();
   const [createTodo, status] = useCreateTodoMutation();
-  const [TodoState, setTodoState] = useState<Todo>({
+  const [todoState, setTodoState] = useState<Todo>({
     id: "",
     title: "",
     priority: 2,
@@ -19,22 +19,17 @@ export const TodoCreate = () => {
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    await createTodo(TodoState);
+    await createTodo(todoState);
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
 
     if (name === 'priority') {
-      setTodoState({ ...TodoState, created_at: null, [name]: parseInt(value) });
+      setTodoState({ ...todoState, created_at: null, [name]: parseInt(value) });
     } else {
-      setTodoState({ ...TodoState, created_at: null, [name]: value });
+      setTodoState({ ...todoState, created_at: null, [name]: value });
     }
-  };
-
-  const handleToggle = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, checked } = e.target;
-    setTodoState({ ...TodoState, [name]: checked });
   };
 
   useEffect(() => {
@@ -57,11 +52,9 @@ export const TodoCreate = () => {
         <TodoForm
           isLoading={status.isLoading}
           isDisabled={status.isLoading}
-          todo={TodoState}
+          todo={todoState}
           handleSubmit={handleSubmit}
-          handleChange={handleChange}
-          handleToggle={handleToggle}
-        />
+          handleChange={handleChange}        />
       </Paper>
     </Box>
   );
