@@ -183,7 +183,7 @@ export function TodoTable({
     }));
   }
 
-  const rowCount = data?.meta.total ?? 0;
+  const rowCount = data?.meta?.total ?? 0;
 
   return (
     <Box sx={{ display: "flex", height: 500 }}>
