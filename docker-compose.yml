@@ -1,0 +1,7 @@
+version: "2.3.3"
+services:
+  app:
+    container_name: todo-list-ddd-front
+    build: .
+    ports:
+      - "3001:3001"
