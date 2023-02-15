@@ -1,0 +1,247 @@
+export const todoResponse = {
+  data: [
+		{
+			id: "221ccbf0-ab00-4d84-a0b8-052840635781",
+			title: "Dinner",
+			priority: 3,
+			description: "Preparing rice with mayonnaise",
+			is_scratched: true,
+			created_at: "2023-02-14T17:15:38.815Z"
+		},
+		{
+			id: "06a28560-c27f-4de4-ac97-e1797296030f",
+			title: "Leitura",
+			priority: 1,
+			description: "Read chapter 10",
+			is_scratched: false,
+			created_at: "2023-02-14T17:14:18.269Z"
+		},
+		{
+			id: "d3771778-88ff-4579-b833-40311c96916b",
+			title: "Gym",
+			priority: 3,
+			description: "Do 20 leg reps",
+			is_scratched: true,
+			created_at: "2023-02-14T17:13:44.682Z"
+		},
+		{
+			id: "8b76e905-ac4f-4c46-bab0-51447c9e17ab",
+			title: "Supermarket",
+			priority: 2,
+			description: "Buy oil, mayonnaise and rice.",
+			is_scratched: false,
+			created_at: "2023-02-14T17:12:50.328Z"
+		},
+    {
+			id: "5d0d2ea2-e2eb-4f4f-90a4-9590d07134fb",
+			title: "Washing",
+			priority: 3,
+			description: "use the fabric softener",
+			is_scratched: true,
+			created_at: "2023-02-14T17:15:38.815Z"
+		},
+    {
+			id: "6ddc2387-3c13-4406-8327-c374ea1d56b8",
+			title: "fill water bottle",
+			priority: 3,
+			description: "fill at least two bottles",
+			is_scratched: true,
+			created_at: "2023-02-14T17:15:38.815Z"
+		},
+    {
+			id: "58f2d3b5-007d-40ff-a743-f2cfed3bc174",
+			title: "play with the dog",
+			priority: 3,
+			description: "give him the new purchased ball",
+			is_scratched: true,
+			created_at: "2023-02-14T17:15:38.815Z"
+		},
+    {
+			id: "7afef6c5-fd02-4de5-9c7a-27b465717062",
+			title: "clean the dog's mess",
+			priority: 3,
+			description: "throw water and scrub",
+			is_scratched: true,
+			created_at: "2023-02-14T17:15:38.815Z"
+		},
+    {
+			id: "5764164a-31a8-4f44-9340-e40792179c1f",
+			title: "play with the dog",
+			priority: 3,
+			description: "give him the new purchased ball",
+			is_scratched: true,
+			created_at: "2023-02-14T17:15:38.815Z"
+		},
+    {
+			id: "2226e863-eb49-4480-a656-af80ad3c2011",
+			title: "restore react threads",
+			priority: 3,
+			description: "focus on learning application component testing",
+			is_scratched: true,
+			created_at: "2023-02-14T17:15:38.815Z"
+		},
+    {
+			id: "8c70e0bc-d64b-4fd3-afff-1b0025201e36",
+			title: "SQL",
+			priority: 3,
+			description: "study topics related to sql query",
+			is_scratched: true,
+			created_at: "2023-02-14T17:15:38.815Z"
+		},
+  ],
+  links: {
+    first: "http://localahost:3000/todos?page=1",
+    last: "http://localahost:3000/todos?page=7",
+    prev: null,
+    next: "http://localahost:3000/todos?page=2",
+  },
+  meta: {
+    current_page: 1,
+    from: 1,
+    last_page: 7,
+    path: "http://localahost:3000/todos",
+    per_page: 15,
+    to: 15,
+    total: 100,
+  },
+}
+
+export const todoResponsePage2 = {
+  data: [
+    {
+      id: "260926c6-4e76-40e0-9170-b9907f0d37b0",
+      title: "LightSlateGray",
+      priority: 1,
+      description: null,
+      is_scratched: true,
+      created_at: "2022-01-17 00:44:21",
+    },
+    {
+      id: "268e4751-2de4-4dda-b1b0-6863a569281b",
+      title: "LightGoldenRodYellow",
+      priority: 2,
+      description: null,
+      is_scratched: true,
+      created_at: "2022-01-17 00:44:21",
+    },
+    {
+      id: "2714af03-7794-4423-820e-33947e6625cd",
+      title: "Plum",
+      priority: 3,
+      description: "Omnis corporis rem id eius porro molestiae.",
+      is_scratched: true,
+      created_at: "2022-01-17 00:44:21",
+    },
+    {
+      id: "28787580-d81d-426f-8e99-0d7422db20d8",
+      title: "MistyRose",
+      priority: 1,
+      description: null,
+      is_scratched: true,
+      created_at: "2022-01-17 00:44:21",
+    },
+    {
+      id: "2d757c67-8d72-4fdc-b5a3-7bbc86ccde5e",
+      title: "LightSeaGreen",
+      priority: 2,
+      description: "Molestiae qui sunt qui modi quibusdam maiores.",
+      is_scratched: true,
+      created_at: "2022-01-17 00:44:21",
+    },
+    {
+      id: "2f506f44-be5f-461b-a9cd-e810a15a9dcb",
+      title: "DarkSlateGray",
+      priority: 3,
+      description: "Esse tempore voluptatem totam reprehenderit eaque.",
+      is_scratched: true,
+      created_at: "2022-01-17 00:44:21",
+    },
+    {
+      id: "312a8041-4ea1-4a14-bdc7-3e1be9b16b07",
+      title: "Blue",
+      priority: 1,
+      description: "Ut illo molestiae est sed.",
+      is_scratched: true,
+      created_at: "2022-01-17 00:44:21",
+    },
+    {
+      id: "345058cb-d1d2-4f67-ba76-ca3657b07d93",
+      title: "Chartreuse",
+      priority: 2,
+      description: null,
+      is_scratched: true,
+      created_at: "2022-01-17 00:44:21",
+    },
+    {
+      id: "34bfc6e1-46ab-4c14-8171-cc9ef817c2f8",
+      title: "LightGreen",
+      priority: 3,
+      description: "Adipisci in quibusdam quas velit minus.",
+      is_scratched: true,
+      created_at: "2022-01-17 00:44:21",
+    },
+    {
+      id: "34d05122-b903-409a-9070-c651414c9b53",
+      title: "HoneyDew",
+      priority: 1,
+      description: "Soluta ipsam quia qui blanditiis ipsum dolores provident.",
+      is_scratched: true,
+      created_at: "2022-01-17 00:44:21",
+    },
+    {
+      id: "365ff8b3-81fb-4819-bf36-78c7f1bcc108",
+      title: "Moccasin",
+      priority: 2,
+      description: null,
+      is_scratched: true,
+      created_at: "2022-01-17 00:44:21",
+    },
+    {
+      id: "36c0f3e3-7c4c-473d-b751-006ec97f6459",
+      title: "DarkSlateGray",
+      priority: 3,
+      description: null,
+      is_scratched: true,
+      created_at: "2022-01-17 00:44:21",
+    },
+    {
+      id: "36e3f578-c7bc-40d2-ba6e-9932299a6e2b",
+      title: "Darkorange",
+      priority: 1,
+      description: "Et non tempora totam temporibus suscipit neque.",
+      is_scratched: true,
+      created_at: "2022-01-17 00:44:21",
+    },
+    {
+      id: "37f64e08-60a3-434b-a2a3-230d4a22665e",
+      title: "AliceBlue",
+      priority: 2,
+      description: null,
+      is_scratched: true,
+      created_at: "2022-01-17 00:44:21",
+    },
+    {
+      id: "3f1fb126-b5ff-469e-ab58-b00ff27148b3",
+      title: "Olive",
+      priority: 3,
+      description: "Debitis natus impedit hic quia magni repellendus ut.",
+      is_scratched: true,
+      created_at: "2022-01-17 00:44:21",
+    },
+  ],
+  links: {
+    first: "http://localhost:3000/todos?page=1",
+    last: "http://localhost:3000/todos?page=7",
+    prev: "http://localhost:3000/todos?page=1",
+    next: "http://localhost:3000/todos?page=3",
+  },
+  meta: {
+    current_page: 2,
+    from: 16,
+    last_page: 7,
+    path: "http://localhost:3000/todos",
+    per_page: 15,
+    to: 30,
+    total: 100,
+  },
+};
