@@ -29,7 +29,7 @@ export const handlers = [
 
 const server = setupServer(...handlers);
 
-describe.skip("TodoList", () => {
+describe("TodoList", () => {
   afterAll(() => server.close());
   beforeAll(() => server.listen());
   afterEach(() => server.resetHandlers());
