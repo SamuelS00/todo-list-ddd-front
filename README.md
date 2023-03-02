@@ -14,6 +14,20 @@ Some of the decisions made in the development of this application include:
 * Adding integration tests with MSW (Mock Service Worker)
 * Using Docker to containerize the application
 
+---
+
+```
+https//localhost:3001/todos
+```
+
+![1677776859788](image/README/1677776859788.png)
+
+```
+https//localhost:3001/todos/create
+```
+
+![1677776846237](image/README/1677776846237.png)
+
 ## Technologies Used
 
 The following technologies were used in the development of this application:
